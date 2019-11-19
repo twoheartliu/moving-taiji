@@ -1,9 +1,5 @@
-const log = console.log.bind(console);
-
-const e = selector => document.querySelector(selector);
-
-const html = e("#html");
-const addStyle = e("#addStyle");
+const html = document.querySelector("#html");
+const addStyle = document.querySelector("#addStyle");
 
 let string = `/*
 大家好，我是二心
