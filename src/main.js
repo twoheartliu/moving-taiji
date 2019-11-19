@@ -3,6 +3,7 @@ const log = console.log.bind(console);
 const e = selector => document.querySelector(selector);
 
 const html = e("#html");
+const addStyle = e("#addStyle");
 
 let string = `/*
 大家好，我是二心
@@ -60,7 +61,6 @@ let string = `/*
 let newString = "";
 
 let n = 0;
-let s = e("#style");
 const step = () => {
   setTimeout(() => {
     // 如果是回车的话，将 br 累加到 newString 上
@@ -68,7 +68,7 @@ const step = () => {
     newString += string[n] === "\n" ? "<br>" : string[n];
 
     html.innerHTML = newString;
-    s.innerHTML = string.substring(0, n);
+    addStyle.innerHTML = string.substring(0, n);
     window.scrollTo(0, 999999);
     html.scrollTo(0, 999999);
     if (n < string.length - 1) {
